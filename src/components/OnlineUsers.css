@@ -1,0 +1,93 @@
+.user-list {
+  width: 18rem;
+  min-width: 18rem;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--heading-color);
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  border-left: 1px solid rgb(205, 202, 202);
+  overflow-y: scroll;
+}
+
+.user-list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.user-list::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  background-color: rgb(209, 207, 207);
+  height: 20px;
+  border-radius: 6px;
+}
+
+.user-list h2 {
+  text-align: right;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2em;
+}
+
+.user-list .user-list-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.user-list .avatar {
+  margin-left: 10px;
+  width: 3rem;
+  height: 3rem;
+}
+
+.user-list .online-user {
+  display: inline-block;
+  margin-right: 10px;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: #0ebb50;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+@media (max-width: 800px) {
+  .user-list {
+    width: 10rem;
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-list .avatar {
+    margin-left: auto;
+    width: 35px;
+    height: 35px;
+  }
+
+  .user-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .user-list .user-list-item {
+    display: block;
+    position: relative;
+
+    margin: 5px auto;
+  }
+
+  .user-list .online-user {
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+  }
+}

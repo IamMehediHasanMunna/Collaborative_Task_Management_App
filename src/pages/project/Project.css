@@ -1,0 +1,232 @@
+/* .project-margin {
+  margin-left: 20rem;
+  margin-right: 20rem;
+} */
+
+.project-details {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 3fr 2fr;
+  align-items: start;
+}
+
+.project-summary {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.project-summary .due-date {
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: var(--title-color);
+}
+.project-summary .details {
+  margin: 30px 0;
+  color: var(--text-color);
+  line-height: 1.8em;
+  font-size: 0.9em;
+}
+
+.project-summary h4 {
+  color: var(--text-color);
+  font-size: 0.9em;
+}
+
+.project-summary .assigned-users {
+  display: flex;
+  margin-top: 20px;
+}
+
+.project-summary .assigned-users .avatar {
+  margin-left: -10px;
+
+  border: 1px solid #999;
+}
+
+.project-summary + .btn {
+  margin-top: 20px;
+}
+
+.project-comments {
+  padding-bottom: 2rem;
+}
+
+.project-comments label {
+  margin-bottom: 0px;
+}
+
+.project-comments text-area {
+  min-height: 40px;
+  font-size: 1.5em;
+}
+/* comment list */
+
+.project-comments ul {
+  max-height: 50vh;
+  margin-top: 10px;
+  overflow-y: scroll;
+  /* border: 2px solid #999;
+  border-radius: 10px; */
+}
+
+.project-comments ul::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.project-comments ul::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.project-comments ul::-webkit-scrollbar-thumb {
+  background-color: rgb(209, 207, 207);
+  height: 20px;
+  border-radius: 6px;
+}
+.project-comments li {
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #f2f2f2;
+  margin-top: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.project-comments li:first-child {
+  margin-top: 0;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  color: var(--title-color);
+}
+
+.comment-author .avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.comment-date {
+  color: var(--text-color);
+  font-size: 0.9em;
+  margin: 4px 0 10px;
+}
+
+.comment-content {
+  color: #666;
+  font-size: 0.9em;
+}
+
+@media (max-width: 1200px) {
+  .project-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-summary {
+    width: 90%;
+  }
+  .project-comments {
+    width: 90%;
+  }
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.tasks .task {
+  display: flex;
+  padding: 2px 0.8rem 2px 0.8rem;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  min-width: 95%;
+  max-width: 95%;
+  min-height: 50px;
+}
+
+.tasks .task .task-content {
+  max-width: 30rem;
+  overflow-wrap: break-word;
+}
+
+.tasks h2 {
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.tasks .task .task-man {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks .task .task-man p {
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.tasks .task .task-man .avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.tasks form {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  border: 1px solid rgb(219, 218, 218);
+  border-radius: 5px;
+}
+
+.tasks form button {
+  margin-top: 2rem;
+}
+
+.tasks form input {
+  width: 43rem;
+}
+
+.done-icon {
+  width: 30px;
+  height: 30px;
+  display: inline;
+
+  margin-left: 10px;
+}
+
+.done-icon:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem rgb(68, 209, 162));
+}
+
+.task-done {
+  filter: none;
+  background-color: rgb(68, 209, 162);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+@media (max-width: 620px) {
+  .tasks form input {
+    width: 240px;
+  }
+}
